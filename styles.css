@@ -1,0 +1,50 @@
+/* Disables Text Selection: Prevents users from copying text */
+body {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+nav {
+    text-align: center; /* Center align the navigation */
+}
+
+/* Remove bullet points and set list items to display horizontally */
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: inline-block; /* Ensure the navigation stays centered */
+}
+
+nav ul li {
+    display: inline-block; /* Display list items horizontally */
+    margin-right: 20px; /* Adjust spacing between list items */
+}
+
+/* Style the links */
+nav ul li a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #333; /* Adjust link color */
+    padding: 10px; /* Add padding for better clickability */
+}
+
+/* Hide dropdown menu by default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff; /* Background color for dropdown menu */
+    padding: 10px; /* Add padding for dropdown items */
+    border: 1px solid #ccc; /* Add border for dropdown menu */
+}
+
+/* Show dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style dropdown menu items */
+.dropdown-menu li {
+    display: block;
+}
