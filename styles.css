@@ -112,3 +112,38 @@ footer {
     padding: 10px 0;
     font-size: 14px;
 }
+
+/* Gallery styles */
+.gallery {
+    position: relative;
+    margin-top: 20px;
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
