@@ -8,17 +8,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentLocation = window.location.href;
     const navLinks = document.querySelectorAll('nav a');
 
-    // Function to check if the link's href matches the current location
+    // Function to check if the link's href matches the current page's URL
     function isCurrentPage(link) {
-        return link.href === currentLocation;
+        return currentLocation.includes(link.href);
     }
 
     // Highlight the active link or its parent dropdown item
     navLinks.forEach(link => {
-        if (isCurrentPage(link) || link.parentElement.querySelector('.dropdown-menu a.active')) {
+        if (isCurrentPage(link)) {
             link.classList.add('active');
-            if (link.parentElement.classList.contains('dropdown')) {
-                link.parentElement.querySelector('a').classList.add('active');
+            if (link.parentElement.classList.contains('dropdown-menu')) {
+                link.parentElement.parentElement.querySelector('a').classList.add('active');
             }
         }
     });
