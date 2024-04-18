@@ -10,6 +10,11 @@ nav {
     text-align: center; /* Center align the navigation */
 }
 
+nav a.active {
+    color: #007bff; /* Change color to highlight the active link */
+    font-weight: bold; /* Optionally, apply other styles to indicate active link */
+}
+
 /* Remove bullet points and set list items to display horizontally */
 nav ul {
     list-style-type: none; /* Remove bullet points */
