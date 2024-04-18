@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('nav a');
 
     navLinks.forEach(link => {
-        if (link.href === currentLocation) {
+        if (link.href === currentLocation || link.parentElement.querySelector('.dropdown-menu a.active')) {
             link.classList.add('active');
         }
     });
