@@ -8,17 +8,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentLocation = window.location.href;
     const navLinks = document.querySelectorAll('nav a');
 
-    // Function to check if the link's href matches the current page's URL
-    function isCurrentPage(link) {
-        return currentLocation.includes(link.href);
-    }
-
-    // Highlight the active link or its parent dropdown item
     navLinks.forEach(link => {
-        if (isCurrentPage(link)) {
+        // Check if the current page's URL contains the link's href
+        if (currentLocation.includes(link.href)) {
             link.classList.add('active');
-            if (link.parentElement.classList.contains('dropdown-menu')) {
-                link.parentElement.parentElement.querySelector('a').classList.add('active');
+            // If the link is in a dropdown menu, add active class to its parent
+            const parentDropdown = link.closest('.dropdown');
+            if (parentDropdown) {
+                parentDropdown.querySelector('a').classList.add('active');
             }
         }
     });
