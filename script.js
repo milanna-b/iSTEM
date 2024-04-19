@@ -3,6 +3,22 @@ window.addEventListener('contextmenu', function (e) {
     e.preventDefault();
 });
 
+// Nav dropdown highlight
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownItems = document.querySelectorAll('.dropdown-menu li');
+
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Remove active class from all dropdown items
+            dropdownItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            // Add active class to the clicked dropdown item
+            this.classList.add('active');
+        });
+    });
+});
+
 // Makes gallery functional
 let slideIndex = 0;
 
