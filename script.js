@@ -3,43 +3,6 @@ window.addEventListener('contextmenu', function (e) {
     e.preventDefault();
 });
 
-// Highlights current page on nav
-document.addEventListener('DOMContentLoaded', function() {
-    const currentLocation = window.location.href;
-    const navLinks = document.querySelectorAll('nav a');
-
-    navLinks.forEach(link => {
-        // Check if the current page's URL contains the link's href
-        if (currentLocation.includes(link.href)) {
-            link.classList.add('active');
-            // If the link is in a dropdown menu, add active class to its parent
-            const parentDropdown = link.closest('.dropdown');
-            if (parentDropdown) {
-                parentDropdown.querySelector('a').classList.add('active');
-            }
-        }
-    });
-
-    // Add event listeners to update active state when clicking dropdown items
-    const dropdownItems = document.querySelectorAll('.dropdown-menu a');
-    dropdownItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Remove active class from all dropdown items
-            dropdownItems.forEach(item => {
-                item.classList.remove('active');
-            });
-            // Add active class to the clicked item
-            this.classList.add('active');
-            // Add active class to its parent dropdown
-            const parentDropdown = this.closest('.dropdown');
-            if (parentDropdown) {
-                parentDropdown.querySelector('a').classList.add('active');
-            }
-        });
-    });
-});
-
-
 // Makes gallery functional
 let slideIndex = 0;
 
