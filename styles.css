@@ -58,7 +58,7 @@ nav ul li a {
     display: block;
 }
 
-.dropdown-menu li:active {
+.dropdown-menu li.active a {
     color: #007bff; /* Change color to highlight the active link */
     font-weight: bold; /* Optionally, apply other styles to indicate active link */
 }
