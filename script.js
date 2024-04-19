@@ -19,7 +19,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Add event listeners to update active state when clicking dropdown items
+    const dropdownItems = document.querySelectorAll('.dropdown-menu a');
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Remove active class from all dropdown items
+            dropdownItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            // Add active class to the clicked item
+            this.classList.add('active');
+            // Add active class to its parent dropdown
+            const parentDropdown = this.closest('.dropdown');
+            if (parentDropdown) {
+                parentDropdown.querySelector('a').classList.add('active');
+            }
+        });
+    });
 });
+
 
 // Makes gallery functional
 let slideIndex = 0;
