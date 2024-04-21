@@ -6,7 +6,7 @@ window.addEventListener('contextmenu', function (e) {
 // Nav dropdown highlight
 document.addEventListener('DOMContentLoaded', function() {
     const dropdownItems = document.querySelectorAll('.dropdown-menu li');
-
+    
     dropdownItems.forEach(item => {
         item.addEventListener('click', function() {
             // Remove active class from all dropdown items
@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
         });
     });
+    // Add 'active' class to the Home link when the page loads
+    const homeLink = document.querySelector('nav ul li:first-child');
+    homeLink.classList.add('active');
 });
 
 // Makes gallery functional
