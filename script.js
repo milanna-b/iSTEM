@@ -5,21 +5,24 @@ window.addEventListener('contextmenu', function (e) {
 
 // Nav dropdown highlight
 document.addEventListener('DOMContentLoaded', function() {
-    const homeLink = document.querySelector('nav ul li:first-child a'); // Select the Home link
-    homeLink.classList.add('active'); // Add the 'active' class to the Home link
+    const navLinks = document.querySelectorAll('nav ul li a'); // Select all navigation links
 
-    const dropdownItems = document.querySelectorAll('.dropdown-menu li');
-
-    dropdownItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Remove active class from all dropdown items
-            dropdownItems.forEach(item => {
-                item.classList.remove('active');
+    // Add event listeners to all navigation links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Remove 'active' class from all navigation links
+            navLinks.forEach(link => {
+                link.classList.remove('active');
             });
-            // Add active class to the clicked dropdown item
+
+            // Add 'active' class to the clicked navigation link
             this.classList.add('active');
         });
     });
+
+    // Highlight the 'Home' link upon page load
+    const homeLink = document.querySelector('nav ul li:first-child a');
+    homeLink.classList.add('active');
 });
 
 // Makes gallery functional
