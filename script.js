@@ -47,7 +47,7 @@ function nextSlide() {
 
 showSlides();
 
-// Smooth scrolling behavior ... test later
+// Smooth scrolling behavior
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
