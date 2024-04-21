@@ -18,6 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
     highlightActiveLink();
 });
 
+// Add event listener to toggle dark mode
+document.getElementById('mode-switch-toggle').addEventListener('change', function() {
+    if (this.checked) {
+      document.body.classList.add('dark-mode'); // Enable dark mode
+    } else {
+      document.body.classList.remove('dark-mode'); // Disable dark mode
+    }
+  });  
+
 // Makes gallery functional
 let slideIndex = 0;
 
