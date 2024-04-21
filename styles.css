@@ -126,7 +126,7 @@ footer {
 
 .slides {
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 .slides img {
