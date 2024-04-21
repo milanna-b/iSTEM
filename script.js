@@ -18,26 +18,35 @@ document.addEventListener('DOMContentLoaded', function() {
     highlightActiveLink();
 });
 
-// Add event listener to toggle dark mode
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('mode-switch-toggle').addEventListener('change', function() {
-        if (this.checked) {
-        enableDarkMode(); // Enable dark mode
-        } else {
-        disableDarkMode(); // Disable dark mode
-        }
-    });
-});
-  
-  // Function to enable dark mode
-  function enableDarkMode() {
+// Function to enable dark mode
+function enableDarkMode() {
     document.body.classList.add('dark-mode'); // Add dark-mode class to the body
-  }
-  
-  // Function to disable dark mode
-  function disableDarkMode() {
+    localStorage.setItem('darkModeEnabled', 'true'); // Store dark mode preference in local storage
+}
+
+// Function to disable dark mode
+function disableDarkMode() {
     document.body.classList.remove('dark-mode'); // Remove dark-mode class from the body
-  }  
+    localStorage.setItem('darkModeEnabled', 'false'); // Store dark mode preference in local storage
+}
+
+// Check local storage for dark mode preference on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const darkModeEnabled = localStorage.getItem('darkModeEnabled');
+    if (darkModeEnabled === 'true') {
+        enableDarkMode();
+        document.getElementById('mode-switch-toggle').checked = true; // Set toggle switch to checked state
+    }
+});
+
+// Add event listener to toggle dark mode
+document.getElementById('mode-switch-toggle').addEventListener('change', function() {
+    if (this.checked) {
+        enableDarkMode(); // Enable dark mode
+    } else {
+        disableDarkMode(); // Disable dark mode
+    }
+});
 
 // Makes gallery functional
 let slideIndex = 0;
