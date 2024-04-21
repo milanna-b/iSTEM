@@ -21,11 +21,21 @@ document.addEventListener('DOMContentLoaded', function() {
 // Add event listener to toggle dark mode
 document.getElementById('mode-switch-toggle').addEventListener('change', function() {
     if (this.checked) {
-      document.body.classList.add('dark-mode'); // Enable dark mode
+      enableDarkMode(); // Enable dark mode
     } else {
-      document.body.classList.remove('dark-mode'); // Disable dark mode
+      disableDarkMode(); // Disable dark mode
     }
-  });  
+  });
+  
+  // Function to enable dark mode
+  function enableDarkMode() {
+    document.body.classList.add('dark-mode'); // Add dark-mode class to the body
+  }
+  
+  // Function to disable dark mode
+  function disableDarkMode() {
+    document.body.classList.remove('dark-mode'); // Remove dark-mode class from the body
+  }  
 
 // Makes gallery functional
 let slideIndex = 0;
