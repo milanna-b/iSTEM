@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Makes gallery functional
 let slideIndex = 0;
+
 document.addEventListener('DOMContentLoaded', function() {
     function showSlides() {
         const slides = document.querySelectorAll('.slides img');
@@ -65,6 +66,12 @@ document.addEventListener('DOMContentLoaded', function() {
         slideIndex++;
         showSlides();
     }
+
+    // Add event listeners for the slideshow navigation buttons
+    document.querySelector('.prev').addEventListener('click', prevSlide);
+    document.querySelector('.next').addEventListener('click', nextSlide);
+
+    // Call the function to initialize the slideshow
     showSlides();
 });
 
