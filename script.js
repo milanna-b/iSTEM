@@ -1,8 +1,3 @@
-/* Disables Right-Click: Discourage users from saving images
-window.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
-}); */
-
 // Nav dropdown highlight
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('nav ul li a'); // Select all navigation links
