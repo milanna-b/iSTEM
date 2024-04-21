@@ -55,6 +55,12 @@ nav ul li a {
 }
 
 /* Light / Dark Modes */
+.sr-only {
+    position: absolute;
+    left: -9999px;
+    visibility: hidden;
+  }
+  
 .mode-switch {
     position: fixed;
     top: 20px;
