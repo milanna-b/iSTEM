@@ -5,21 +5,6 @@ window.addEventListener('contextmenu', function (e) {
 
 // Nav dropdown highlight
 document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('nav ul li a'); // Select all navigation links
-
-    // Add event listeners to all navigation links
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            // Remove 'active' class from all navigation links
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-            });
-
-            // Add 'active' class to the clicked navigation link
-            this.classList.add('active');
-        });
-    });
-
     // Highlight the 'Home' link upon page load
     const homeLink = document.querySelector('nav ul li:first-child a');
     homeLink.classList.add('active');
