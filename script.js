@@ -40,12 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Add event listener to toggle dark mode
-document.getElementById('mode-switch-toggle').addEventListener('change', function() {
-    if (this.checked) {
-        enableDarkMode(); // Enable dark mode
-    } else {
-        disableDarkMode(); // Disable dark mode
-    }
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('mode-switch-toggle').addEventListener('change', function() {
+        if (this.checked) {
+            enableDarkMode(); // Enable dark mode
+        } else {
+            disableDarkMode(); // Disable dark mode
+        }
+    });
 });
 
 // Makes gallery functional
