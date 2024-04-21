@@ -7,7 +7,7 @@ window.addEventListener('contextmenu', function (e) {
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('nav ul li a'); // Select all navigation links
 
-    // Function to highlight the active link
+    // Function to highlight the active link based on the current page URL
     function highlightActiveLink() {
         const currentUrl = window.location.href; // Get the current URL
         navLinks.forEach(link => {
@@ -21,20 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Highlight the active link upon page load
     highlightActiveLink();
-
-    // Highlight the active link when a navigation link is clicked
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            // Remove 'active' class from all links
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-            });
-            // Add 'active' class to the clicked link
-            this.classList.add('active');
-            // Highlight the active link after the click event
-            highlightActiveLink();
-        });
-    });
 });
 
 // Makes gallery functional
