@@ -7,13 +7,12 @@ window.addEventListener('contextmenu', function (e) {
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('nav ul li a'); // Select all navigation links
 
-    // Function to highlight the active link based on the current page URL
+    // Function to highlight the active link based on the current page
     function highlightActiveLink() {
-        const currentPath = window.location.pathname; // Get the path of the current URL
+        const currentPage = document.body.classList; // Get the classes of the body tag
         navLinks.forEach(link => {
-            const linkPath = link.getAttribute('href'); // Get the path of the navigation link
-            if (linkPath === currentPath) {
-                link.classList.add('active'); // Add 'active' class to the link if its path matches the current path
+            if (currentPage.contains(link.dataset.page)) {
+                link.classList.add('active'); // Add 'active' class to the link if its dataset matches the current page class
             } else {
                 link.classList.remove('active'); // Remove 'active' class from other links
             }
