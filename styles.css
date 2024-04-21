@@ -15,10 +15,6 @@ nav a.active {
     font-weight: bold; /* Optionally, apply other styles to indicate active link */
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
 /* Remove bullet points and set list items to display horizontally */
 nav ul {
     list-style-type: none; /* Remove bullet points */
@@ -56,11 +52,6 @@ nav ul li a {
 /* Style dropdown menu items */
 .dropdown-menu li {
     display: block;
-}
-
-.dropdown-menu li.active a {
-    color: #007bff; /* Change color to highlight the active link */
-    font-weight: bold; /* Optionally, apply other styles to indicate active link */
 }
 
 /* Footer styles */
