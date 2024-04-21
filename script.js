@@ -1,7 +1,7 @@
-// Disables Right-Click: Discourage users from saving images
+/* Disables Right-Click: Discourage users from saving images
 window.addEventListener('contextmenu', function (e) {
     e.preventDefault();
-});
+}); */
 
 // Nav dropdown highlight
 document.addEventListener('DOMContentLoaded', function() {
