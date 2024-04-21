@@ -9,10 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to highlight the active link based on the current page URL
     function highlightActiveLink() {
-        const currentUrl = window.location.href; // Get the current URL
+        const currentPath = window.location.pathname; // Get the path of the current URL
         navLinks.forEach(link => {
-            if (link.href === currentUrl) {
-                link.classList.add('active'); // Add 'active' class to the link if its href matches the current URL
+            const linkPath = link.getAttribute('href'); // Get the path of the navigation link
+            if (linkPath === currentPath) {
+                link.classList.add('active'); // Add 'active' class to the link if its path matches the current path
             } else {
                 link.classList.remove('active'); // Remove 'active' class from other links
             }
