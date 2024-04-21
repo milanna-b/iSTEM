@@ -54,13 +54,19 @@ nav ul li a {
     display: block;
 }
 
-/* Light / Dark Modes */
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+  }  
+
+/* Switch Visual Modes */
 .sr-only {
     position: absolute;
     left: -9999px;
     visibility: hidden;
   }
-  
+
 .mode-switch {
     position: fixed;
     top: 20px;
