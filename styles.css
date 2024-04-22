@@ -200,6 +200,7 @@ footer {
     width: 100%;
     height: 900px;
     object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    object-position: top; /* Aligns img to top, no cut off heads!!*/
 }
 
 .prev, .next {
