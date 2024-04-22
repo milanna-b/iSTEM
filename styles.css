@@ -194,7 +194,8 @@ footer {
 
 .slides img {
     width: 100%;
-    height: auto;
+    height: 300px;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
 }
 
 .prev, .next {
