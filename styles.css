@@ -1,9 +1,14 @@
-/* Disables Text Selection: Prevents users from copying text */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 body {
+    /* Disables Text Selection: Prevents users from copying text */
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    /* Body Styles */
+    font-family: 'Source Code Pro', monospace;
 }
 
 nav {
@@ -52,6 +57,16 @@ nav ul li a {
 /* Style dropdown menu items */
 .dropdown-menu li {
     display: block;
+}
+
+h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
 /* Dark Mode Styles */
