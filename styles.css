@@ -207,12 +207,10 @@ footer {
     background-color: #0056b3; /* Darker shade on hover */
 }
 
-/* Gallery Styles */
+/* Gallery styles */
 .gallery {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    position: relative;
+    margin-top: 20px;
 }
 
 .slides {
@@ -222,8 +220,7 @@ footer {
 
 .slides img {
     width: 100%;
-    height: auto; /* Change height to auto to maintain aspect ratio */
-    max-height: 100%; /* Ensure images don't exceed the height of the container */
+    height: 900px;
     object-fit: cover; /* Maintain aspect ratio and cover the entire container */
 }
 
