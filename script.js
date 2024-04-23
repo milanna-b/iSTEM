@@ -113,12 +113,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Calculate result based on user selections
         const results = {
-            A: 'Web Development and Programming',
-            B: 'Biotechnology and Genetic Engineering',
-            C: 'Computer Hardware and Networking',
-            D: 'Cybersecurity and Data Protection',
-            E: 'Digital Design and Visual Arts',
-            F: 'Game Design and Development'
+            A: 'Web Application Development & Programming',
+            B: 'Biotechnology',
+            C: 'Computer Systems & Information Technology',
+            D: 'Cybersecurity',
+            E: 'Digital Design',
+            F: 'Game & Simulation'
         };
 
         const scores = {
