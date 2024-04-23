@@ -9,7 +9,9 @@ body {
     -ms-user-select: none;
     /* Body Styles */
     font-family: 'Source Code Pro', monospace;
-    max-width: 800px;
+    max-width: 1645px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 nav {
