@@ -107,7 +107,8 @@ document.addEventListener('DOMContentLoaded', function() {
             C: 'Computer Systems & Information Technology',
             D: 'Cybersecurity',
             E: 'Digital Design',
-            F: 'Game & Simulation'
+            F: 'Game & Simulation',
+            G: 'Engineering'
         };
 
         const scores = {
@@ -116,7 +117,8 @@ document.addEventListener('DOMContentLoaded', function() {
             C: 0,
             D: 0,
             E: 0,
-            F: 0
+            F: 0,
+            G: 0
         };
 
         for (let question in answers) {
