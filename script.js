@@ -98,51 +98,53 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Quiz Behavior
-document.getElementById('quiz-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('quiz-form').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    // Retrieve user selections
-    const answers = {
-        q1: document.querySelector('input[name="q1"]:checked').value,
-        q2: document.querySelector('input[name="q2"]:checked').value,
-        q3: document.querySelector('input[name="q3"]:checked').value,
-        q4: document.querySelector('input[name="q4"]:checked').value,
-        q5: document.querySelector('input[name="q5"]:checked').value
-    };
+        // Retrieve user selections
+        const answers = {
+            q1: document.querySelector('input[name="q1"]:checked').value,
+            q2: document.querySelector('input[name="q2"]:checked').value,
+            q3: document.querySelector('input[name="q3"]:checked').value,
+            q4: document.querySelector('input[name="q4"]:checked').value,
+            q5: document.querySelector('input[name="q5"]:checked').value
+        };
 
-    // Calculate result based on user selections
-    const results = {
-        A: 'Web Development and Programming',
-        B: 'Biotechnology and Genetic Engineering',
-        C: 'Computer Hardware and Networking',
-        D: 'Cybersecurity and Data Protection',
-        E: 'Digital Design and Visual Arts',
-        F: 'Game Design and Development'
-    };
+        // Calculate result based on user selections
+        const results = {
+            A: 'Web Development and Programming',
+            B: 'Biotechnology and Genetic Engineering',
+            C: 'Computer Hardware and Networking',
+            D: 'Cybersecurity and Data Protection',
+            E: 'Digital Design and Visual Arts',
+            F: 'Game Design and Development'
+        };
 
-    const scores = {
-        A: 0,
-        B: 0,
-        C: 0,
-        D: 0,
-        E: 0,
-        F: 0
-    };
+        const scores = {
+            A: 0,
+            B: 0,
+            C: 0,
+            D: 0,
+            E: 0,
+            F: 0
+        };
 
-    for (let question in answers) {
-        scores[answers[question]]++;
-    }
-
-    // Find the iSTEM strand with the highest score
-    let maxScore = 0;
-    let iSTEMStrand = '';
-    for (let strand in scores) {
-        if (scores[strand] > maxScore) {
-            maxScore = scores[strand];
-            iSTEMStrand = results[strand];
+        for (let question in answers) {
+            scores[answers[question]]++;
         }
-    }
 
-    // Display the result
-    document.getElementById('result').innerHTML = `<h2>Your iSTEM Strand: ${iSTEMStrand}</h2>`;
+        // Find the iSTEM strand with the highest score
+        let maxScore = 0;
+        let iSTEMStrand = '';
+        for (let strand in scores) {
+            if (scores[strand] > maxScore) {
+                maxScore = scores[strand];
+                iSTEMStrand = results[strand];
+            }
+        }
+
+        // Display the result
+        document.getElementById('result').innerHTML = `<h2>Your iSTEM Strand: ${iSTEMStrand}</h2>`;
+    });
 });
