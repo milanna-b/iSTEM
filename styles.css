@@ -328,19 +328,6 @@ h2.dark-mode {
     color: var(--white); /* Heading color for dark mode */
 }
 
-.mode-switch.dark-mode {
-    background-color: var(--light-coral); /* Background color for mode switch in dark mode */
-}
-
-.mode-switch-label.dark-mode {
-    background-color: var(--light-coral); /* Background color for mode switch label in dark mode */
-}
-
-.mode-switch-label.dark-mode:before {
-    background-color: var(--prussian-blue); /* Button color for mode switch in dark mode */
-    box-shadow: 0 0 8px 2px var(--white); /* Glow effect for mode switch button in dark mode */
-}
-
 footer.dark-mode {
     background-color: var(--prussian-blue); /* Background color for footer in dark mode */
     color: var(--white); /* Text color for footer in dark mode */
