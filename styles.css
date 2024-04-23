@@ -51,7 +51,7 @@ nav ul li {
 /* Style the links */
 nav ul li a {
     text-decoration: none; /* Remove underlines from links */
-    color: var(--jonquil); /* Adjust link color */
+    color: var(--burgundy); /* Adjust link color */
     padding: 10px; /* Add padding for better clickability */
 }
 
@@ -61,7 +61,7 @@ nav ul li a {
     position: absolute;
     background-color: var(--white); /* Background color for dropdown menu */
     padding: 10px; /* Add padding for dropdown items */
-    border: 1px solid #ccc; /* Add border for dropdown menu */
+    border: 1px solid var(--prussian-blue); /* Add border for dropdown menu */
 }
 
 /* Show dropdown menu on hover */
@@ -77,11 +77,13 @@ nav ul li a {
 h1 {
     font-family: 'Exo 2', sans-serif;
     font-weight: 500;
+    color: var(--burgundy);
 }
 
 h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+    color: var(--burgundy);
 }
 
 /* Switch Visual Modes */
@@ -121,11 +123,6 @@ h2 {
 #mode-switch-toggle:checked + .mode-switch-label:before {
     transform: translateX(20px); /* Move the switch button to the right */
     box-shadow: 0 0 8px 2px var(--white); /* Add glow effect */
-}
-
-body.dark-mode {
-    background-color: var(--prussian-blue); /* Background color for dark mode */
-    color: var(--white); /* Text color for dark mode */
 }
 
 /* Footer styles */
@@ -212,7 +209,7 @@ footer {
 }
 
 .istemp-info-button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: var(--prussian-blue); /* Darker shade on hover */
 }
 
 /* Gallery styles */
@@ -287,7 +284,7 @@ textarea {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: var(--prussian-blue);
+    background-color: var(--jonquil);
     color: var(--white);
     border: none;
     border-radius: 5px;
@@ -296,7 +293,7 @@ textarea {
 }
 
 .form-button:hover {
-    background-color: #0056b3;
+    background-color: var(--prussian-blue);
 }
 
 /* Dark Mode Styles */
