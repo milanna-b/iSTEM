@@ -86,17 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
     showSlides();
 });
 
-// Smooth scrolling behavior... DOESN'T WORK!!!!
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
 // Quiz Behavior
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('quiz-form').addEventListener('submit', function(event) {
