@@ -6,6 +6,7 @@
     --burgundy: #7B242C;
     --light-coral: #F08080;
     --jonquil: #F6CE38;
+    --white: #fff;
 }
 
 body {
@@ -23,14 +24,14 @@ body {
 
 nav {
     text-align: center; /* Center align the navigation */
-    border: 2px solid #007bff; /* Add border */
+    border: 2px solid var(--prussian-blue); /* Add border */
     border-radius: 10px; /* Make it circular */
     padding: 10px;
     margin-top: 20px;
 }
 
 nav a.active {
-    color: #007bff; /* Change color to highlight the active link */
+    color: var(--prussian-blue); /* Change color to highlight the active link */
     font-weight: bold; /* Optionally, apply other styles to indicate active link */
 }
 
@@ -50,7 +51,7 @@ nav ul li {
 /* Style the links */
 nav ul li a {
     text-decoration: none; /* Remove underlines from links */
-    color: #333; /* Adjust link color */
+    color: var(--jonquil); /* Adjust link color */
     padding: 10px; /* Add padding for better clickability */
 }
 
@@ -58,7 +59,7 @@ nav ul li a {
 .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: #fff; /* Background color for dropdown menu */
+    background-color: var(--white); /* Background color for dropdown menu */
     padding: 10px; /* Add padding for dropdown items */
     border: 1px solid #ccc; /* Add border for dropdown menu */
 }
@@ -83,12 +84,6 @@ h2 {
     font-weight: 500;
 }
 
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #333;
-    color: #fff;
-  }  
-
 /* Switch Visual Modes */
 .sr-only {
     position: absolute;
@@ -107,7 +102,7 @@ body.dark-mode {
     display: inline-block;
     width: 40px;
     height: 20px;
-    background-color: #ddd; /* Default background color for the switch */
+    background-color: var(--light-coral); /* Default background color for the switch */
     border-radius: 20px;
     cursor: pointer;
 }
@@ -117,7 +112,7 @@ body.dark-mode {
     display: block;
     width: 20px;
     height: 20px;
-    background-color: #fff; /* Default color for the switch button */
+    background-color: var(--white); /* Default color for the switch button */
     border-radius: 50%;
     transition: transform 0.3s, box-shadow 0.3s; /* Add box-shadow transition */
     box-shadow: 0 0 8px rgba(0, 0, 0, 0); /* Initial box-shadow (no glow) */
@@ -125,18 +120,18 @@ body.dark-mode {
 
 #mode-switch-toggle:checked + .mode-switch-label:before {
     transform: translateX(20px); /* Move the switch button to the right */
-    box-shadow: 0 0 8px 2px #fff; /* Add glow effect */
+    box-shadow: 0 0 8px 2px var(--white); /* Add glow effect */
 }
-  
-  body.dark-mode {
-    background-color: #333; /* Background color for dark mode */
-    color: #fff; /* Text color for dark mode */
-  }  
+
+body.dark-mode {
+    background-color: var(--prussian-blue); /* Background color for dark mode */
+    color: var(--white); /* Text color for dark mode */
+}
 
 /* Footer styles */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--prussian-blue);
+    color: var(--white);
     padding: 50px 0;
     margin-top: 20px;
 }
@@ -181,12 +176,12 @@ footer {
 }
 
 .links ul li a {
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
 }
 
 .social-links a {
-    color: #fff;
+    color: var(--white);
     font-size: 20px;
     margin-right: 10px;
 }
@@ -196,7 +191,7 @@ footer {
 }
 
 .footer-bottom {
-    background-color: #222;
+    background-color: var(--burgundy);
     text-align: center;
     padding: 10px 0;
     font-size: 14px;
@@ -209,8 +204,8 @@ footer {
 }
 
 .istemp-info-button {
-    background-color: #007bff; /* Change to your desired button color */
-    color: #fff;
+    background-color: var(--jonquil); /* Change to your desired button color */
+    color: var(--white);
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -243,7 +238,7 @@ footer {
     transform: translateY(-50%);
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: var(--white);
     border: none;
     cursor: pointer;
 }
@@ -261,38 +256,10 @@ section {
     margin-bottom: 40px;
 }
 
-.timeline {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #007bff;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-}
-
-.dot::before {
-    content: attr(data-date);
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-}
-
 .form-container {
     max-width: 600px;
     margin: 50px auto;
-    background-color: #fff;
+    background-color: var(--white);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -320,8 +287,8 @@ textarea {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--prussian-blue);
+    color: var(--white);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -331,3 +298,9 @@ textarea {
 .form-button:hover {
     background-color: #0056b3;
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}  
