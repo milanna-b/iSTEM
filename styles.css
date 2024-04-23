@@ -31,7 +31,7 @@ nav {
 }
 
 nav a.active {
-    color: var(--prussian-blue); /* Change color to highlight the active link */
+    color: var(--light-coral); /* Change color to highlight the active link */
     font-weight: bold; /* Optionally, apply other styles to indicate active link */
 }
 
@@ -51,7 +51,7 @@ nav ul li {
 /* Style the links */
 nav ul li a {
     text-decoration: none; /* Remove underlines from links */
-    color: var(--burgundy); /* Adjust link color */
+    color: var(--light-coral); /* Adjust link color */
     padding: 10px; /* Add padding for better clickability */
 }
 
@@ -151,6 +151,7 @@ footer {
 .footer-section h2 {
     font-size: 18px;
     margin-bottom: 15px;
+    color: var(--light-coral);
 }
 
 .footer-section p {
