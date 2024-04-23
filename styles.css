@@ -87,37 +87,39 @@ body.dark-mode {
     position: absolute;
     left: -9999px;
     visibility: hidden;
-  }
+}
 
 .mode-switch {
     position: fixed;
     top: 20px;
     right: 20px;
     z-index: 1000; /* Ensure it appears above other content */
-  }
-  
-  .mode-switch-label {
+}
+
+.mode-switch-label {
     display: inline-block;
     width: 40px;
     height: 20px;
     background-color: #ddd; /* Default background color for the switch */
     border-radius: 20px;
     cursor: pointer;
-  }
-  
-  .mode-switch-label:before {
+}
+
+.mode-switch-label:before {
     content: '';
     display: block;
     width: 20px;
     height: 20px;
     background-color: #fff; /* Default color for the switch button */
     border-radius: 50%;
-    transition: transform 0.3s; /* Smooth transition for the switch button */
-  }
-  
-  #mode-switch-toggle:checked + .mode-switch-label:before {
+    transition: transform 0.3s, box-shadow 0.3s; /* Add box-shadow transition */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0); /* Initial box-shadow (no glow) */
+}
+
+#mode-switch-toggle:checked + .mode-switch-label:before {
     transform: translateX(20px); /* Move the switch button to the right */
-  }
+    box-shadow: 0 0 8px 2px #fff; /* Add glow effect */
+}
   
   body.dark-mode {
     background-color: #333; /* Background color for dark mode */
