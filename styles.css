@@ -15,6 +15,7 @@ nav {
     text-align: center; /* Center align the navigation */
     border: 2px solid #007bff; /* Add border */
     border-radius: 10px; /* Make it circular */
+    padding: 10px;
 }
 
 nav a.active {
