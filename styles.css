@@ -239,13 +239,6 @@ footer {
     right: 10px;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
 .form-container {
     max-width: 600px;
     margin: 50px auto;
@@ -273,7 +266,7 @@ textarea {
     border-radius: 5px;
 }
 
-button {
+.form-button {
     display: block;
     width: 100%;
     padding: 10px;
@@ -285,6 +278,6 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
+.form-button:hover {
     background-color: #0056b3;
 }
