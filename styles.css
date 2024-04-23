@@ -2,13 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 body {
-    /* Disables Text Selection: Prevents users from copying text
+    /* Disables Text Selection: Prevents users from copying text */
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
-    -ms-user-select: none; */
+    -ms-user-select: none;
     /* Body Styles */
     font-family: 'Source Code Pro', monospace;
+    max-width: 800px;
 }
 
 nav {
