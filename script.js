@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
     showSlides();
 });
 
-// Smooth scrolling behavior
+// Smooth scrolling behavior... DOESN'T WORK!!!!
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
