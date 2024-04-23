@@ -207,22 +207,33 @@ footer {
     background-color: #0056b3; /* Darker shade on hover */
 }
 
-/* Gallery and content layout */
-.content-container {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Distribute space between the items */
-    align-items: flex-start; /* Align items at the start of the cross axis */
-    flex-wrap: wrap; /* Allow items to wrap if needed */
-}
-
-.content-container article {
-    flex: 1 1 50%; /* Each item takes up half of the available width */
-    margin-right: 20px; /* Add margin to separate items */
-}
-
-.gallery-container {
-    flex: 1 1 50%; /* Each item takes up half of the available width */
-}
+/* Index Flex Syles */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
+  }
+  
+  .flex-items:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+  }
+  
+  .flex-items:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+  }
 
 /* Gallery Styles */
 .gallery {
@@ -266,6 +277,13 @@ footer {
 
 section {
     margin-bottom: 40px;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .dot {
