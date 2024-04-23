@@ -38,7 +38,7 @@ function disableDarkMode() {
     document.body.classList.remove('dark-mode');
 
     // Remove dark-mode class from other necessary elements
-    document.querySelectorAll('.nav, h1, h2, .mode-switch, .mode-switch-label, footer, .footer-bottom, .istemp-info-button, .form-container, .form-button').forEach(function(element) {
+    document.querySelectorAll('.nav, h1, h2, .footer, .footer-bottom, .istemp-info-button, .form-container, .form-button').forEach(function(element) {
         element.classList.remove('dark-mode');
     });
 
