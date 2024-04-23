@@ -206,10 +206,31 @@ footer {
     background-color: #0056b3; /* Darker shade on hover */
 }
 
-/* Gallery styles */
-.gallery {
+/* Flexbox styles for main content container */
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Styles for the article */
+.content-container article {
+    flex: 1 1 50%; /* Take up half of the available width */
+    padding-right: 20px; /* Add some spacing between the article and the gallery */
+}
+
+/* Styles for the gallery container */
+.content-container .gallery-container {
+    flex: 1 1 50%; /* Take up half of the available width */
+    margin-top: 20px; /* Same margin as before */
     position: relative;
-    margin-top: 20px;
+}
+
+/* Gallery Styles */
+.gallery {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .slides {
@@ -219,7 +240,8 @@ footer {
 
 .slides img {
     width: 100%;
-    height: 900px;
+    height: auto; /* Change height to auto to maintain aspect ratio */
+    max-height: 100%; /* Ensure images don't exceed the height of the container */
     object-fit: cover; /* Maintain aspect ratio and cover the entire container */
 }
 
@@ -241,6 +263,7 @@ footer {
 .next {
     right: 10px;
 }
+
 
 section {
     margin-bottom: 40px;
