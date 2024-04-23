@@ -1,6 +1,13 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+:root {
+    --prussian-blue: #1A344D;
+    --burgundy: #7B242C;
+    --light-coral: #F08080;
+    --jonquil: #F6CE38;
+}
+
 body {
     /* Disables Text Selection: Prevents users from copying text */
     user-select: none;
