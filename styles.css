@@ -207,23 +207,21 @@ footer {
     background-color: #0056b3; /* Darker shade on hover */
 }
 
-/* Flexbox styles for main content container */
+/* Gallery and content layout */
 .content-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute space between the items */
+    align-items: flex-start; /* Align items at the start of the cross axis */
+    flex-wrap: wrap; /* Allow items to wrap if needed */
 }
 
-/* Styles for the main content container */
-.main-content {
-    flex: 1 1 calc(50% - 20px); /* Take up half of the available width with some margin */
-    margin-right: 20px; /* Add margin between the main content and the gallery */
+.content-container article {
+    flex: 1 1 50%; /* Each item takes up half of the available width */
+    margin-right: 20px; /* Add margin to separate items */
 }
 
-/* Styles for the gallery container */
 .gallery-container {
-    flex: 1 1 calc(50% - 20px); /* Take up half of the available width with some margin */
-    margin-top: 20px; /* Same margin as before */
+    flex: 1 1 50%; /* Each item takes up half of the available width */
 }
 
 /* Gallery Styles */
