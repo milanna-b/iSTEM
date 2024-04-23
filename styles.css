@@ -185,6 +185,24 @@ footer {
     font-size: 14px;
 }
 
+/* iSTEM Button Link Styles */
+.istemp-info-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.istemp-info-button {
+    background-color: #007bff; /* Change to your desired button color */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.istemp-info-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
 /* Gallery styles */
 .gallery {
     position: relative;
