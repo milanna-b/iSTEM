@@ -20,14 +20,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to enable dark mode
 function enableDarkMode() {
-    document.body.classList.add('dark-mode'); // Add dark-mode class to the body
-    localStorage.setItem('darkModeEnabled', 'true'); // Store dark mode preference in local storage
+    // Add dark-mode class to the body
+    document.body.classList.add('dark-mode');
+
+    // Add dark-mode class to other necessary elements
+    document.querySelectorAll('.nav, h1, h2, .mode-switch, .mode-switch-label, footer, .footer-bottom, .istemp-info-button, .form-container, .form-button').forEach(function(element) {
+        element.classList.add('dark-mode');
+    });
+
+    // Store dark mode preference in local storage
+    localStorage.setItem('darkModeEnabled', 'true');
 }
 
 // Function to disable dark mode
 function disableDarkMode() {
-    document.body.classList.remove('dark-mode'); // Remove dark-mode class from the body
-    localStorage.setItem('darkModeEnabled', 'false'); // Store dark mode preference in local storage
+    // Remove dark-mode class from the body
+    document.body.classList.remove('dark-mode');
+
+    // Remove dark-mode class from other necessary elements
+    document.querySelectorAll('.nav, h1, h2, .mode-switch, .mode-switch-label, footer, .footer-bottom, .istemp-info-button, .form-container, .form-button').forEach(function(element) {
+        element.classList.remove('dark-mode');
+    });
+
+    // Store dark mode preference in local storage
+    localStorage.setItem('darkModeEnabled', 'false');
 }
 
 // Check local storage for dark mode preference on page load
